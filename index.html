@@ -1,0 +1,127 @@
+<!--
+  ════════════════════════════════════════════════════════════════
+  DAMYAN PEYCHEV — PORTFOLIO
+  Edit in TWO main places:
+    • Hero + about text below
+    • The SKILLS array in script.js, and PROJECTS in projects-data.js
+  Drop your photo at /assets/me.jpg  (and project videos/images in /assets)
+  Skill icons load from Devicon (CDN) — no files needed.
+  ════════════════════════════════════════════════════════════════
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damyan Peychev — Game Programmer / Developer</title>
+  <meta name="description" content="Portfolio of Damyan Peychev, game programmer and developer.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a href="#home" class="brand">Damyan<span class="brand-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════ HERO (split screen) ═══════════════ -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <div class="hero-inner">
+          <p class="hero-greeting">Hey, I'm</p>
+          <h1 class="hero-name">Damyan<br>Peychev</h1>
+          <p class="hero-role">Game Programmer / Developer</p>
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/damyan-peychev-6114a7296/" class="social" aria-label="LinkedIn" target="_blank" rel="noopener"> 
+              <i class="devicon-linkedin-plain"></i>
+            </a>
+            <a href="https://github.com/Damyan23" class="social" aria-label="GitHub" target="_blank" rel="noopener">
+              <i class="devicon-github-original"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <!-- Replace assets/me.jpg with your photo -->
+        <img src="assets/me.jpg" alt="Photo of Damyan Peychev" class="hero-photo"
+             onerror="this.style.display='none'; this.parentElement.classList.add('photo-missing');">
+      </div>
+    </section>
+
+    <!-- Everything below scrolls up over the fixed hero photo -->
+    <div class="content-flow">
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="section" id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="section-rule"></div>
+      <p class="prose">
+        I am an aspiring game programmer/developer passionate about creating immersive and engaging gaming experiences. 
+        I am always eager to learn and enhance my skills in game development, striving to write clean and efficient code. 
+        With substantial experience working in teams, I am an enthusiastic, hard-working team player dedicated to developing story-driven and gameplay-focused games.
+        My journey in game development began in 2020 with my first game development course.
+      </p>
+      <p class="prose">
+        Since then, I have worked on several personal and team projects, continuously honing my skills. 
+        In 2023, I enrolled in the Saxion University of Applied Sciences, pursuing a Bachelor's degree in Creative Media and Game Technologies. 
+        Over the years, I have gained valuable experience in critical thinking and problem-solving, which I apply to my programming projects.
+      </p>
+    </section>
+
+    <!-- ═══════════════ SKILLS ═══════════════ -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="section-rule"></div>
+      <div class="tabs" role="tablist" aria-label="Skill categories" id="skillTabs"></div>
+      <div class="skill-grid" id="skillGrid"></div>
+    </section>
+
+    <!-- ═══════════════ PROJECTS ═══════════════ -->
+    <section class="section" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="section-rule"></div>
+      <div class="project-list" id="projectList"></div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="section" id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-rule"></div>
+      <p class="prose">Got a project in mind, a question, or just want to say hi? My inbox is open.</p>
+      <p class="contact-email">[email protected]</p>
+      <div class="cta-row">
+        <a href="mailto:[email protected]" class="btn btn-primary">Email me</a>
+        <a href="#" class="btn btn-ghost">GitHub</a>
+        <a href="#" class="btn btn-ghost">LinkedIn</a>
+      </div>
+    </section>
+
+    </div><!-- /.content-flow -->
+
+  </main>
+
+  <footer><p>© <span id="year"></span> Damyan Peychev</p></footer>
+
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

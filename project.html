@@ -1,0 +1,45 @@
+<!--
+  PROJECT DETAIL PAGE (template)
+  Don't edit per-project content here — it's pulled from projects-data.js
+  based on the ?id= in the URL, e.g. project.html?id=project-one
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Damyan Peychev</title>
+  <meta name="description" content="Project detail — Damyan Peychev.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a href="index.html" class="brand">Damyan<span class="brand-dot">.</span></a>
+    <nav class="nav nav--always">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html#projects" class="nav-link">All projects</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" class="detail">
+    <!-- filled by project.js; this is the fallback if a project isn't found -->
+    <div id="detailRoot">
+      <div class="detail-loading">Loading project…</div>
+    </div>
+  </main>
+
+  <footer><p>© <span id="year"></span> Damyan Peychev</p></footer>
+
+  <script src="projects-data.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>
