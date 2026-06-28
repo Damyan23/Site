@@ -35,16 +35,15 @@
 const PROJECTS = [
   {
     id: 'project-one',
-    title: 'THE HUNT',
-    short: 'A third-person souslike and roguelike built in Unreal Engine 5 with C++ and Blueprints.',
-    media: { type: 'video', src: 'assets/The-Hunt/The-Hunt.mp4', poster: 'assets/The-Hunt/Poster.png' },
-    skills: ['C++', 'Unreal'],
-    github: 'https://github.com/Damyan23/The-Hunt',
+    title: 'Project One',
+    short: 'A short description shown on the homepage — what the game/app is and what you built.',
+    media: { type: 'video', src: 'assets/project-one.mp4', poster: 'assets/project-one.jpg' },
+    skills: ['C#', 'Unity'],
+    github: 'https://github.com/yourname/project-one',
     content: [
+      { type: 'text', text: 'Open with what the project is and the idea behind it. This first paragraph sets the scene before any media.' },
 
-      { type: 'video', src: 'assets/The-Hunt/The-Hunt.mp4', poster: 'assets/The-Hunt/Poster.png', caption: 'Game trailer/teaser' },
-
-      { type: 'text', text: '“The Hunt” is a vertical slice of a third-person horror roguelike built in Unreal Engine 5 with C++ and Blueprints for visual scripting. It blends Soulslike combat with a procedural, branching board structure inspired by Slay the Spire, layered with event-based encounters and other roguelike elements.' },
+      { type: 'video', src: 'assets/project-one.mp4', poster: 'assets/project-one.jpg', caption: 'Gameplay trailer / demo reel.' },
 
       { type: 'heading', text: 'The idea' },
       { type: 'text', text: 'Explain the concept, the goal, who it was for. Keep paragraphs readable — a few sentences each.' },

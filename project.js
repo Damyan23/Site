@@ -124,10 +124,41 @@ function renderProject(root, p, index) {
     ${pager}`;
 }
 
+// ── Mouse spotlight + scroll progress (shared look with homepage) ──
+function setupEffects() {
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const p = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    const el = document.getElementById('progress');
+    if (el) el.style.width = p + '%';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !window.matchMedia('(pointer:fine)').matches) return;
+  const spot = document.getElementById('spotlight');
+  if (!spot) return;
+  let tx = innerWidth / 2, ty = innerHeight / 2, cx = tx, cy = ty, shown = false;
+  window.addEventListener('mousemove', (e) => {
+    tx = e.clientX; ty = e.clientY;
+    if (!shown) { spot.style.opacity = '1'; shown = true; }
+  });
+  const loop = () => {
+    cx += (tx - cx) * 0.15; cy += (ty - cy) * 0.15;
+    spot.style.transform = `translate(${cx}px, ${cy}px)`;
+    requestAnimationFrame(loop);
+  };
+  loop();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('detailRoot');
   const yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
+
+  setupEffects();
 
   if (typeof PROJECTS === 'undefined') { renderNotFound(root); return; }
 

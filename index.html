@@ -5,7 +5,7 @@
     • Hero + about text below
     • The SKILLS array in script.js, and PROJECTS in projects-data.js
   Drop your photo at /assets/me.jpg  (and project videos/images in /assets)
-  Skill icons load from Devicon (CDN) — no files needed.
+  Skill icons load from Devicon (CDN). Section numbers use JetBrains Mono.
   ════════════════════════════════════════════════════════════════
 -->
 <!DOCTYPE html>
@@ -18,18 +18,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- scroll progress bar -->
+  <div id="progress" class="progress" aria-hidden="true"></div>
+  <!-- mouse spotlight glow -->
+  <div id="spotlight" class="spotlight" aria-hidden="true"></div>
+
   <header class="topbar">
-    <a href="#home" class="brand">Damyan<span class="brand-dot">.</span></a>
+    <a href="#home" class="brand">Damyan&nbsp;Peychev<span class="brand-dot">.</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -38,80 +42,108 @@
       <a href="#skills" class="nav-link">Skills</a>
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#contact" class="nav-link">Contact</a>
+      <a href="#" class="nav-icon" aria-label="GitHub" target="_blank" rel="noopener"><i class="devicon-github-original"></i></a>
     </nav>
   </header>
 
   <main id="main">
 
-    <!-- ═══════════════ HERO (split screen) ═══════════════ -->
+    <!-- ═══════════════ HERO ═══════════════ -->
     <section class="hero" id="home">
-      <div class="hero-left">
-        <div class="hero-inner">
-          <p class="hero-greeting">Hey, I'm</p>
-          <h1 class="hero-name">Damyan<br>Peychev</h1>
-          <p class="hero-role">Game Programmer / Developer</p>
-          <div class="hero-socials">
-            <a href="https://www.linkedin.com/in/damyan-peychev-6114a7296/" class="social" aria-label="LinkedIn" target="_blank" rel="noopener"> 
-              <i class="devicon-linkedin-plain"></i>
-            </a>
-            <a href="https://github.com/Damyan23" class="social" aria-label="GitHub" target="_blank" rel="noopener">
-              <i class="devicon-github-original"></i>
-            </a>
+      <div class="hero-aurora hero-aurora-1" aria-hidden="true"></div>
+      <div class="hero-aurora hero-aurora-2" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow"><span class="eyebrow-line"></span>GAME PROGRAMMER / DEVELOPER</div>
+          <h1 class="hero-name">Damyan<br><span class="accent-italic">Peychev</span></h1>
+          <p class="hero-desc">
+            I build immersive, gameplay-driven games — combat systems, procedural
+            worlds, and the clean architecture that holds them together. Currently
+            studying Creative Media &amp; Game Technologies at Saxion.
+          </p>
+          <div class="cta-row">
+            <a href="#projects" class="btn btn-primary">View work →</a>
+            <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
+            <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="hero-photo-card">
+          <div class="hero-photo-glow" aria-hidden="true"></div>
+          <div class="hero-photo-frame">
+            <img src="assets/me.jpg" alt="Photo of Damyan Peychev" class="hero-photo"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('photo-missing');">
+            <div class="hero-photo-shade" aria-hidden="true"></div>
+            <div class="hero-photo-tag">SAXION · NL</div>
+            <div class="hero-photo-badge"><span class="badge-dot"></span>OPEN TO WORK</div>
           </div>
         </div>
       </div>
-      <div class="hero-right">
-        <!-- Replace assets/me.jpg with your photo -->
-        <img src="assets/me.jpg" alt="Photo of Damyan Peychev" class="hero-photo"
-             onerror="this.style.display='none'; this.parentElement.classList.add('photo-missing');">
-      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down">↓</a>
     </section>
 
-    <!-- Everything below scrolls up over the fixed hero photo -->
     <div class="content-flow">
 
     <!-- ═══════════════ ABOUT ═══════════════ -->
     <section class="section" id="about">
-      <h2 class="section-title">About Me</h2>
-      <div class="section-rule"></div>
-      <p class="prose">
-        I am an aspiring game programmer/developer passionate about creating immersive and engaging gaming experiences. 
-        I am always eager to learn and enhance my skills in game development, striving to write clean and efficient code. 
-        With substantial experience working in teams, I am an enthusiastic, hard-working team player dedicated to developing story-driven and gameplay-focused games.
-        My journey in game development began in 2020 with my first game development course.
-      </p>
-      <p class="prose">
-        Since then, I have worked on several personal and team projects, continuously honing my skills. 
-        In 2023, I enrolled in the Saxion University of Applied Sciences, pursuing a Bachelor's degree in Creative Media and Game Technologies. 
-        Over the years, I have gained valuable experience in critical thinking and problem-solving, which I apply to my programming projects.
-      </p>
+      <div class="section-num"><span class="accent">01</span> &nbsp;/&nbsp; About</div>
+      <h2 class="section-title">An aspiring game developer with a <span class="accent-italic">builder's</span> mindset.</h2>
+      <div class="about-grid">
+        <div>
+          <p class="prose">
+            I'm passionate about creating immersive, gameplay-focused experiences and
+            writing clean, efficient, maintainable code. I've spent years working in
+            teams on story- and gameplay-driven games — an enthusiastic, hard-working
+            team player who enjoys solving hard problems.
+          </p>
+          <p class="prose">
+            My journey started in 2020 with my first game-development course. Since then
+            I've shipped personal and team projects, and in 2023 I enrolled at Saxion
+            University of Applied Sciences for a Bachelor's in Creative Media &amp; Game
+            Technologies.
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-year">2020</div>
+            <div class="about-card-text">First game-development course — where it all began.</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-year">2023</div>
+            <div class="about-card-text">Enrolled at Saxion for a Bachelor's in Creative Media &amp; Game Technologies.</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ═══════════════ SKILLS ═══════════════ -->
     <section class="section" id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="section-rule"></div>
+      <div class="section-num"><span class="accent">02</span> &nbsp;/&nbsp; Skills</div>
+      <h2 class="section-title">What I work with</h2>
+      <p class="section-sub">Tap a tile for how I picked it up &amp; how confident I am.</p>
       <div class="tabs" role="tablist" aria-label="Skill categories" id="skillTabs"></div>
       <div class="skill-grid" id="skillGrid"></div>
     </section>
 
     <!-- ═══════════════ PROJECTS ═══════════════ -->
     <section class="section" id="projects">
-      <h2 class="section-title">Projects</h2>
-      <div class="section-rule"></div>
+      <div class="section-num"><span class="accent">03</span> &nbsp;/&nbsp; Selected work</div>
+      <h2 class="section-title">Things I've built</h2>
       <div class="project-list" id="projectList"></div>
     </section>
 
     <!-- ═══════════════ CONTACT ═══════════════ -->
     <section class="section" id="contact">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="section-rule"></div>
+      <div class="section-num"><span class="accent">04</span> &nbsp;/&nbsp; Contact</div>
+      <h2 class="section-title">Let's build something.</h2>
       <p class="prose">Got a project in mind, a question, or just want to say hi? My inbox is open.</p>
-      <p class="contact-email">[email protected]</p>
+      <a href="mailto:[email protected]" class="contact-email">[email protected]</a>
       <div class="cta-row">
         <a href="mailto:[email protected]" class="btn btn-primary">Email me</a>
-        <a href="#" class="btn btn-ghost">GitHub</a>
-        <a href="#" class="btn btn-ghost">LinkedIn</a>
+        <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
+        <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
       </div>
     </section>
 

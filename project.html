@@ -13,16 +13,20 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <div id="progress" class="progress" aria-hidden="true"></div>
+  <div id="spotlight" class="spotlight" aria-hidden="true"></div>
+
   <header class="topbar">
-    <a href="index.html" class="brand">Damyan<span class="brand-dot">.</span></a>
+    <a href="index.html" class="brand">Damyan&nbsp;Peychev<span class="brand-dot">.</span></a>
     <nav class="nav nav--always">
       <a href="index.html" class="nav-link">Home</a>
       <a href="index.html#projects" class="nav-link">All projects</a>
@@ -31,7 +35,6 @@
   </header>
 
   <main id="main" class="detail">
-    <!-- filled by project.js; this is the fallback if a project isn't found -->
     <div id="detailRoot">
       <div class="detail-loading">Loading project…</div>
     </div>
