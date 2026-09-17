@@ -1,0 +1,6 @@
+# Game builds ? served from Oracle, far over the 25 MiB Workers limit
+*.rar
+*.zip
+
+# Local wrangler cache
+.wrangler/
