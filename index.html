@@ -13,6 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
   <title>Damyan Peychev — Game Programmer / Developer</title>
   <meta name="description" content="Portfolio of Damyan Peychev, game programmer and developer.">
 
@@ -23,12 +24,10 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- scroll progress bar -->
-  <div id="progress" class="progress" aria-hidden="true"></div>
   <!-- mouse spotlight glow -->
   <div id="spotlight" class="spotlight" aria-hidden="true"></div>
 
@@ -41,8 +40,9 @@
       <a href="#about" class="nav-link">About</a>
       <a href="#skills" class="nav-link">Skills</a>
       <a href="#projects" class="nav-link">Projects</a>
+      <a href="#now" class="nav-link">Now</a>
       <a href="#contact" class="nav-link">Contact</a>
-      <a href="#" class="nav-icon" aria-label="GitHub" target="_blank" rel="noopener"><i class="devicon-github-original"></i></a>
+      <a href="https://github.com/Damyan23" class="nav-icon" aria-label="GitHub" target="_blank" rel="noopener"><i class="devicon-github-original"></i></a>
     </nav>
   </header>
 
@@ -56,7 +56,7 @@
       <div class="hero-inner">
         <div class="hero-text">
           <div class="hero-eyebrow"><span class="eyebrow-line"></span>GAME PROGRAMMER / DEVELOPER</div>
-          <h1 class="hero-name">Damyan<br><span class="accent-italic">Peychev</span></h1>
+          <h1 class="hero-name">Damyan<br><span class="hero-name-last">Peychev</span></h1>
           <p class="hero-desc">
             I build immersive, gameplay-driven games — combat systems, procedural
             worlds, and the clean architecture that holds them together. Currently
@@ -64,8 +64,8 @@
           </p>
           <div class="cta-row">
             <a href="#projects" class="btn btn-primary">View work →</a>
-            <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
-            <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+            <a href="https://github.com/Damyan23" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/damyan-peychev-6114a7296/" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
           </div>
         </div>
 
@@ -88,8 +88,8 @@
 
     <!-- ═══════════════ ABOUT ═══════════════ -->
     <section class="section" id="about">
-      <div class="section-num"><span class="accent">01</span> &nbsp;/&nbsp; About</div>
-      <h2 class="section-title">An aspiring game developer with a <span class="accent-italic">builder's</span> mindset.</h2>
+      <div class="section-num reveal-up"><span class="accent">01</span> &nbsp;/&nbsp; About</div>
+      <h2 class="section-title reveal-up">An aspiring game developer with a builder's mindset.</h2>
       <div class="about-grid">
         <div>
           <p class="prose">
@@ -104,15 +104,25 @@
             University of Applied Sciences for a Bachelor's in Creative Media &amp; Game
             Technologies.
           </p>
+          <p class="prose">
+            During my studies I spent five months interning at Artking Studios as a game
+            developer, working across both code and UI on a racing-game vertical slice in
+            Unity — hands-on production experience that sharpened how I build real,
+            shippable features.
+          </p>
         </div>
         <div class="about-cards">
-          <div class="about-card">
+          <div class="about-card reveal-up">
             <div class="about-card-year">2020</div>
             <div class="about-card-text">First game-development course — where it all began.</div>
           </div>
-          <div class="about-card">
+          <div class="about-card reveal-up">
             <div class="about-card-year">2023</div>
             <div class="about-card-text">Enrolled at Saxion for a Bachelor's in Creative Media &amp; Game Technologies.</div>
+          </div>
+          <div class="about-card reveal-up">
+            <div class="about-card-year">Internship · 5 months</div>
+            <div class="about-card-text">Game developer at Artking Studios — code &amp; UI on a racing-game vertical slice in Unity.</div>
           </div>
         </div>
       </div>
@@ -120,8 +130,8 @@
 
     <!-- ═══════════════ SKILLS ═══════════════ -->
     <section class="section" id="skills">
-      <div class="section-num"><span class="accent">02</span> &nbsp;/&nbsp; Skills</div>
-      <h2 class="section-title">What I work with</h2>
+      <div class="section-num reveal-up"><span class="accent">02</span> &nbsp;/&nbsp; Skills</div>
+      <h2 class="section-title reveal-up">What I work with</h2>
       <p class="section-sub">Tap a tile for how I picked it up &amp; how confident I am.</p>
       <div class="tabs" role="tablist" aria-label="Skill categories" id="skillTabs"></div>
       <div class="skill-grid" id="skillGrid"></div>
@@ -129,21 +139,39 @@
 
     <!-- ═══════════════ PROJECTS ═══════════════ -->
     <section class="section" id="projects">
-      <div class="section-num"><span class="accent">03</span> &nbsp;/&nbsp; Selected work</div>
-      <h2 class="section-title">Things I've built</h2>
+      <div class="section-num reveal-up"><span class="accent">03</span> &nbsp;/&nbsp; Selected work</div>
+      <h2 class="section-title reveal-up">Things I've built</h2>
       <div class="project-list" id="projectList"></div>
+
+      <!-- Smaller work. Cards come from PROJECTS entries flagged
+           `scale: 'small'` in projects-data.js. The heading hides
+           itself when there are none. -->
+      <div class="small-head" id="smallHead">
+        <h3 class="small-title">Other things I&rsquo;ve built</h3>
+        <p class="small-sub">Deep dives into a single system, plus smaller projects and experiments.</p>
+      </div>
+      <div class="small-grid" id="smallList"></div>
+    </section>
+
+    <!-- ═══════════════ CURRENTLY WORKING ON ═══════════════ -->
+    <!-- Cards come from the NOW array in script.js — edit them there -->
+    <section class="section" id="now">
+      <div class="section-num reveal-up"><span class="accent">04</span> &nbsp;/&nbsp; Right now</div>
+      <h2 class="section-title reveal-up">What I'm working on</h2>
+      <p class="section-sub">Where my time is going at the moment.</p>
+      <div class="now-grid" id="nowList"></div>
     </section>
 
     <!-- ═══════════════ CONTACT ═══════════════ -->
     <section class="section" id="contact">
-      <div class="section-num"><span class="accent">04</span> &nbsp;/&nbsp; Contact</div>
-      <h2 class="section-title">Let's build something.</h2>
+      <div class="section-num reveal-up"><span class="accent">05</span> &nbsp;/&nbsp; Contact</div>
+      <h2 class="section-title reveal-up">Let's build something.</h2>
       <p class="prose">Got a project in mind, a question, or just want to say hi? My inbox is open.</p>
-      <a href="mailto:[email protected]" class="contact-email">[email protected]</a>
+      <a href="mailto:d.peychev12@gmail.com" class="contact-email">d.peychev12@gmail.com</a>
       <div class="cta-row">
-        <a href="mailto:[email protected]" class="btn btn-primary">Email me</a>
-        <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
-        <a href="#" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+        <a href="mailto:d.peychev12@gmail.com" class="btn btn-primary">Email me</a>
+        <a href="https://github.com/Damyan23" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/damyan-peychev-6114a7296/" class="btn btn-ghost" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
       </div>
     </section>
 
