@@ -118,8 +118,21 @@ function buildSkills() {
   const hideDetail = () => panel.classList.remove('show');
   wrap.addEventListener('mouseleave', hideDetail);
 
-  const showDetail = (s) => {
+  // Point the panel's arrow at the row being hovered. Measured at hover time
+  // because the panel is sticky — its box moves independently of the list.
+  const aimArrow = (row) => {
+    if (!row) return;
+    const r = row.getBoundingClientRect();
+    const p = panel.getBoundingClientRect();
+    const y = (r.top + r.height / 2) - p.top;
+    // keep the arrow inside the panel's edges so it never floats off a corner
+    const clamped = Math.max(18, Math.min(p.height - 18, y));
+    panel.style.setProperty('--arrow-y', clamped + 'px');
+  };
+
+  const showDetail = (s, row) => {
     panel.classList.add('show');
+    aimArrow(row);
     const links = skillProjectLinks(s.projects);
     panelInner.innerHTML = `
       <span class="skill-panel-name">${s.name}</span>
@@ -163,7 +176,7 @@ function buildSkills() {
     gridEl.innerHTML = markup(category);
     gridEl.querySelectorAll('.skill-row').forEach((row) => {
       const s = set[Number(row.dataset.idx)];
-      row.addEventListener('mouseenter', () => showDetail(s));
+      row.addEventListener('mouseenter', () => showDetail(s, row));
     });
     hideDetail();
     gridEl.classList.remove('is-leaving');

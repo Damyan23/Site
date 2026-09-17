@@ -556,7 +556,7 @@ const PROJECTS = [
       ] },
 
       { type: 'heading', text: 'What I actually built' },
-      { type: 'text', text: 'The work I actually shipped in this prototype was the systems layer around discovery and persistence: the book UI via BookManager, the map and journal flow tied to Structure and JournalEntry, the scene-safe inventory in Inventory, the settings data loaded through LoadPrefs, and the time-of-day system built from TimeManager and TimeService. Those systems were the backbone of the prototype, and they are what made the world feel consistent as the player moved between scenes.' },
+      { type: 'text', text: 'The work I actually built in this prototype was the systems layer around discovery and persistence: the book UI via BookManager, the map and journal flow tied to Structure and JournalEntry, the scene-safe inventory in Inventory, the settings data loaded through LoadPrefs, and the time-of-day system built from TimeManager and TimeService. Those systems were the backbone of the prototype, and they are what made the world feel consistent as the player moved between scenes.' },
       { type: 'details', summary: 'Why this mattered more than raw feature count', blocks: [
         { type: 'text', text: 'The project was only a small prototype, but the value was in the flow between systems: discover a place, read it in the journal, carry that state between scenes, and let the world continue to feel coherent. That is what made the game feel like a real prototype rather than a pile of isolated systems.' }
       ] },
@@ -784,7 +784,7 @@ const PROJECTS = [
     github: 'https://github.com/Damyan23/OpenGL',
     download: 'assets/OpenGL/OpenGL.rar',
     content: [
-      { type: 'text', text: 'I had spent years working inside engines without much idea what they were doing underneath, so I built a small renderer in C++ with OpenGL to find out. It starts at an empty window and ends with lit, textured shapes you can fly a camera around. I picked OpenGL over Vulkan or DirectX for exactly one reason: it is old, which means it is documented to death, and I wanted to spend the time on the concepts rather than on setup.' },
+      { type: 'text', text: 'I had been working inside engines for a while without much idea what they were doing underneath, so I built a small renderer in C++ with OpenGL to find out. It starts at an empty window and ends with lit, textured shapes you can fly a camera around. I picked OpenGL over Vulkan or DirectX for exactly one reason: it is old, which means it is documented to death, and I wanted to spend the time on the concepts rather than on setup.' },
 
       { type: 'heading', text: 'Getting one triangle on screen' },
       { type: 'text', text: 'The first triangle took longer than everything after it. Drawing anything means handing the GPU a list of corner positions, telling it how to read that list, and writing two small programs that run on the GPU itself \u2014 a vertex shader that decides where each corner lands on screen, and a fragment shader that decides what colour every pixel between them should be. Nothing is drawn for you. A white triangle is the point at which all of that is finally working.' },
