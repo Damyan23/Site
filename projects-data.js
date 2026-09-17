@@ -196,7 +196,7 @@ const PROJECTS = [
     skills: ['C++', 'Unreal Engine 5', 'Blueprints', 'GAS', 'StateTree', 'Procedural Generation'],
     status: 'Vertical slice',
     meta: { Role: 'Sole Engineer (code & integration)', Engine: 'Unreal Engine 5 (C++ & Blueprints)', Year: '2025-2026', Team: 'Two-person team' },
-    github: 'https://github.com/Damyan23/TheHunt/tree/main',
+    github: 'https://github.com/Damyan23/The-Hunt',
     download: 'assets/The-Hunt/TheHunt_Build.zip',
     subpages: ['the-hunt-map'],
     content: [
@@ -343,7 +343,7 @@ const PROJECTS = [
     media: { type: 'image', src: 'assets/The-Hunt/map-final.jpg' },
     skills: ['C++', 'Unreal Engine 5', 'Procedural Generation', 'Graph Algorithms'],
     meta: { Role: 'Sole Engineer', Engine: 'Unreal Engine 5 (C++)', Year: '2025-2026', 'Part of': 'The Hunt' },
-    github: 'https://github.com/Damyan23/TheHunt/tree/main',
+    github: 'https://github.com/Damyan23/The-Hunt',
     download: '',
     content: [
       { type: 'text', text: 'Between fights, The Hunt drops you onto a board of nodes and lets you pick your way up it — a fight here, a rest there, a stranger who wants to trade. It is the structure Slay the Spire made familiar. None of it is placed by hand. The whole layout is generated fresh every run.' },
