@@ -192,16 +192,16 @@ const PROJECTS = [
     id: 'the-hunt',
     title: 'The Hunt',
     short: 'A third-person horror roguelike in Unreal Engine 5 \u2014 Soulslike combat meets a procedural, Slay the Spire-style board. Sole engineer on a two-person team. Most of my time went into combat feel and the board generator; what I am proudest of is coming in having only ever used Unity and still getting every core system working end to end in C++.',
-    media: { type: 'video', src: 'assets/The-Hunt/the-hunt.mp4', poster: 'assets/The-Hunt/hero-map.jpg' },
+    media: { type: 'video', src: 'https://assets.dpeychev.dev/the-hunt.mp4', poster: 'assets/The-Hunt/hero-map.jpg' },
     skills: ['C++', 'Unreal Engine 5', 'Blueprints', 'GAS', 'StateTree', 'Procedural Generation'],
     status: 'Vertical slice',
     meta: { Role: 'Sole Engineer (code & integration)', Engine: 'Unreal Engine 5 (C++ & Blueprints)', Year: '2025-2026', Team: 'Two-person team' },
     github: 'https://github.com/Damyan23/The-Hunt',
-    download: 'assets/The-Hunt/TheHunt_Build.zip',
+    download: 'https://assets.dpeychev.dev/TheHunt_Build.zip',
     subpages: ['the-hunt-map'],
     content: [
       { type: 'text', text: 'The Hunt is a vertical slice of a third-person horror roguelike built in Unreal Engine 5 with C++ and Blueprints. It blends Soulslike combat \u2014 stamina, blocking, stagger, parries, dodge frames \u2014 with a procedural, branching board inspired by Slay the Spire, layered with event-based encounters and roguelike progression. I was the sole engineer on a two-person team, handling all code and integration while my teammate handled art, design, and level design.' },
-      { type: 'video', src: 'assets/The-Hunt/the-hunt.mp4', poster: 'assets/The-Hunt/hero-map.jpg', caption: 'Gameplay trailer \u2014 combat, the procedural board, and the explorable areas.' },
+      { type: 'video', src: 'https://assets.dpeychev.dev/the-hunt.mp4', poster: 'assets/The-Hunt/hero-map.jpg', caption: 'Gameplay trailer \u2014 combat, the procedural board, and the explorable areas.' },
 
       { type: 'heading', text: 'Why this project' },
       { type: 'text', text: 'Before this I worked almost entirely in Unity. Unreal was unfamiliar territory, and I wanted to change that by confronting its hardest aspects head-on \u2014 real-time combat, AI, procedural generation, and modular architecture \u2014 rather than easing in through tutorial-style exercises. The goal was a focused vertical slice where every core system was proven end to end, built on foundations solid enough to keep extending afterwards.' },
@@ -418,7 +418,7 @@ const PROJECTS = [
     status: 'Playable prototype',
     meta: { Role: 'Gameplay & systems programmer', Engine: 'Unity 2022', Year: '2024', Team: 'Solo' },
     github: 'https://github.com/Damyan23/Castle-Siege',
-    download: 'assets/Castle-Siege/Castle-Siege.rar',
+    download: 'https://assets.dpeychev.dev/Castle-Siege.rar',
     // Child pages of this project. Each id must exist in PROJECTS below.
     // HIDDEN \u2014 hex map page is offline until the generator works again. Uncomment to restore.
     // subpages: ['hex-map-generator'],
@@ -515,15 +515,15 @@ const PROJECTS = [
     id: 'the-scorch',
     title: 'The Scorch',
     short: 'A 3D open-world desert adventure in Unity \u2014 sail a sand boat between ancient ruins, and rebuild a lost world\u2019s story from what you find. One of two engineers on a six-person team. My focus was the in-world book that carries the journal, map, inventory and settings as one interface, and I am proud that it holds together across pausing, tab switching and scene changes instead of coming apart at the seams.',
-    media: { type: 'video', src: 'assets/The-Scorch/The-Scorch-Trailer.mp4', poster: 'assets/The-Scorch/hero.png' },
+    media: { type: 'video', src: 'https://assets.dpeychev.dev/The-Scorch-Trailer.mp4', poster: 'assets/The-Scorch/hero.png' },
     skills: ['C#', 'Unity', 'UI Programming', 'ScriptableObjects', 'FMOD', 'Systems Design'],
     status: 'Playable prototype',
     meta: { Role: 'Engineer \u2014 systems, UI & world interaction', Engine: 'Unity 2022.3 (URP)', Year: '2025', Team: 'Six-person team' },
     github: 'https://github.com/Jasper-Nijkamp/Project-Startup',
-    download: 'assets/The-Scirch/The-Scorch.zip',
+    download: 'https://assets.dpeychev.dev/The-Scorch.zip',
     content: [
       { type: 'text', text: 'The Scorch was a Unity prototype built in a short sprint with a six-person team, and most of my work sat in the systems and UI layer. My role was the engineer behind the book interface, the discovery loop, the inventory/data model, scene persistence, and the day/night lighting system.' },
-      { type: 'video', src: 'assets/The-Scorch/The-Scorch-Trailer.mp4', poster: 'assets/The-Scorch/hero.png' },
+      { type: 'video', src: 'https://assets.dpeychev.dev/The-Scorch-Trailer.mp4', poster: 'assets/The-Scorch/hero.png' },
       { type: 'text', text: 'The design goal was not “add a menu,” but “make the world feel readable through what the player finds.” That is why the interface lived in a physical book rather than a separate HUD: the journal, map, settings, and inventory all shared one interaction model, and the world only became legible after a structure had actually been discovered.' },
 
       { type: 'heading', text: 'The book as the game interface' },
@@ -573,7 +573,7 @@ const PROJECTS = [
     status: 'Playable prototype',                                   // TODO: confirm
     meta: { Role: 'Engineer \u2014 networking, UI & input', Engine: 'Unity', Year: '2025', Team: 'Six-person team (Sliding Dog)' },   // year taken from the script dates — correct it if wrong
     github: 'https://github.com/Damyan23/Jiefs-Diner',
-    download: 'assets/Jiefs-Diner/Jiefs-Diner.rar',
+    download: 'https://assets.dpeychev.dev/Jiefs-Diner.rar',
     content: [
       { type: 'text', text: "Jief's Diner is a time-based cooking game in the spirit of Overcooked, made by Sliding Dog \u2014 six of us: two engineers, three artists and a designer. It came before The Scorch, the other Sliding Dog project on this site. The unusual part is where it is played. The game runs on a PC, but nobody touches the PC. Every player uses their own phone as a controller, and the two screens deliberately show completely different things." },
       { type: 'video', src: 'assets/Jiefs-Diner/gameplay.mp4', poster: 'assets/Jiefs-Diner/hero.png', caption: 'A round in progress on the PC \u2014 orders coming in, stations in use, timers running.' },
@@ -751,7 +751,7 @@ const PROJECTS = [
     skills: ['C#', 'Unity', 'Procedural Generation', 'Graph Algorithms'],
     meta: { Role: 'Solo', Engine: 'Unity', Year: '2025' },
     github: 'https://github.com/Damyan23/Procedurally-Generated-Maze',
-    download: 'assets/Hex-Maze/Procedurally-Generated-Maze.zip',
+    download: 'https://assets.dpeychev.dev/Procedurally-Generated-Maze.zip',
     content: [
       { type: 'text', text: 'Set a width and a height, press generate, and this builds a grid of hexagons and carves a maze through it. You choose which of three algorithms does the carving, and once it is done it finds the route from the entrance to the exit. The hexes themselves are generated rather than modelled \u2014 the mesh is built in code, which is what made it cheap to knock individual walls out as the maze forms.' },
       { type: 'heading', text: 'Three algorithms, three shapes of maze' },
@@ -782,7 +782,7 @@ const PROJECTS = [
     skills: ['C++', 'OpenGL', 'GLSL', 'Graphics Programming', '3D Math'],
     meta: { Role: 'Solo', Language: 'C++ / GLSL', Year: '2024' },
     github: 'https://github.com/Damyan23/OpenGL',
-    download: 'assets/OpenGL/OpenGL.rar',
+    download: 'https://assets.dpeychev.dev/OpenGL.rar',
     content: [
       { type: 'text', text: 'I had been working inside engines for a while without much idea what they were doing underneath, so I built a small renderer in C++ with OpenGL to find out. It starts at an empty window and ends with lit, textured shapes you can fly a camera around. I picked OpenGL over Vulkan or DirectX for exactly one reason: it is old, which means it is documented to death, and I wanted to spend the time on the concepts rather than on setup.' },
 
